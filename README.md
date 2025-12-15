@@ -4,7 +4,7 @@ This repository contains my **Portfolio 2 assignment**, a multipage front-end po
 The portfolio is designed to present my work in a professional and structured way for potential employers and clients.
 
 ## Live portfolio
-https://YOUR-PORTFOLIO-LINK.netlify.app
+https://t0nj3.netlify.app/
 
 ---
 
