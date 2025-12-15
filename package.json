@@ -1,0 +1,31 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "dev:css": "tailwindcss -i ./src/input.css -o ./assets/css/output.css --watch",
+      "build:css": "tailwindcss -i ./src/input.css -o ./assets/css/output.css"
+    },
+    "devDependencies": {
+      "tailwindcss": "^3.4.17",
+      "postcss": "^8.4.38",
+      "autoprefixer": "^10.4.19"
+    },
+    
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T0nj3/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/T0nj3/portfolio/issues"
+  },
+  "homepage": "https://github.com/T0nj3/portfolio#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
+  }
+}

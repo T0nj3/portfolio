@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tonje Albertin Kristiansen | Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/output.css" />
+  </head>
+
+  <body class="min-h-screen bg-zinc-50 text-zinc-900">
+    <header class="border-b border-black/10 bg-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+        <a href="./index.html" class="text-sm font-semibold tracking-tight">
+          Tonje Albertin Kristiansen
+        </a>
+
+        <nav class="flex items-center gap-2 text-sm">
+          <a class="rounded-full px-3 py-2 hover:bg-black/5" href="#projects">Projects</a>
+          <a class="rounded-full px-3 py-2 hover:bg-black/5" href="#contact">Contact</a>
+          <button
+            type="button"
+            class="rounded-full border border-black/10 bg-black/[0.04] px-3 py-2 font-medium hover:bg-black/10"
+          >
+            🌙 Dark
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 py-10">
+      <section class="rounded-2xl border border-black/10 bg-white p-6">
+        <h1 class="text-2xl font-semibold tracking-tight">Tailwind test</h1>
+        <p class="mt-2 text-sm text-zinc-600">
+          If this card is white with rounded corners and a subtle border, Tailwind is working.
+        </p>
+
+        <div class="mt-5 flex flex-wrap gap-2">
+          <span class="rounded-full bg-cyan-500 px-3 py-1 text-xs font-semibold text-white">cyan</span>
+          <span class="rounded-full bg-purple-500 px-3 py-1 text-xs font-semibold text-white">purple</span>
+          <span class="rounded-full bg-zinc-900 px-3 py-1 text-xs font-semibold text-white">zinc</span>
+        </div>
+      </section>
+
+      <section id="projects" class="mt-10">
+        <h2 class="text-lg font-semibold">Projects</h2>
+        <div class="mt-4 grid gap-4 md:grid-cols-3">
+          <div class="rounded-2xl border border-black/10 bg-white p-5">Card 1</div>
+          <div class="rounded-2xl border border-black/10 bg-white p-5">Card 2</div>
+          <div class="rounded-2xl border border-black/10 bg-white p-5">Card 3</div>
+        </div>
+      </section>
+
+      <section id="contact" class="mt-10">
+        <h2 class="text-lg font-semibold">Contact</h2>
+        <p class="mt-2 text-sm text-zinc-600">This is just a placeholder.</p>
+      </section>
+    </main>
+  </body>
+</html>
