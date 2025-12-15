@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loading – Tonje Albertin Kristiansen</title>
     <link rel="stylesheet" href="./assets/css/output.css" />
-
-    <script>
-      setTimeout(() => {
-        window.location.replace("./index.html?fromIntro=1");
-      }, 5000);
-    </script>
   </head>
 
   <body class="relative flex min-h-screen items-center justify-center bg-zinc-950 text-zinc-100 overflow-hidden">
@@ -44,5 +38,11 @@
         animation: loading 2s ease-in-out infinite;
       }
     </style>
+    <script>
+      sessionStorage.setItem("introPlayed", "true");
+      setTimeout(() => {
+        window.location.replace("./index.html");
+      }, 5000);
+    </script>
   </body>
 </html>

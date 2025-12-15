@@ -1,0 +1,32 @@
+[
+  {
+    "id": "css-frameworks",
+    "title": "CSS Frameworks",
+    "image": "../assets/images/frameworks.png",
+    "intro": "Comparison and implementation of modern CSS frameworks.",
+    "description": "This project explores different CSS frameworks with focus on structure, scalability and maintainability. Decisions are documented and compared based on real use cases.",
+    "tech": ["HTML", "CSS", "Tailwind"],
+    "github": "https://github.com/T0nj3/frameworks",
+    "live": "https://frameworkstk.netlify.app"
+  },
+  {
+    "id": "js-frameworks",
+    "title": "JavaScript Frameworks",
+    "image": "../assets/images/jsframeworks.png",
+    "intro": "Exploring modern JavaScript frameworks.",
+    "description": "An exploration of JavaScript frameworks with focus on component structure, state handling and developer experience.",
+    "tech": ["JavaScript"],
+    "github": "https://github.com/Andlie94/Cartastrophe-JSFW",
+    "live": "https://cartastrophe.netlify.app/"
+  },
+  {
+    "id": "semester-project-2",
+    "title": "Semester Project 2",
+    "image": "../assets/images/sp2.png",
+    "intro": "A complete front-end project.",
+    "description": "A full project combining design, API integration and interaction, built with a real-world mindset.",
+    "tech": ["HTML", "CSS", "JavaScript", "API"],
+    "github": "https://github.com/T0nj3/auction-room",
+    "live": "https://auction-room.netlify.app/"
+  }
+]
