@@ -14,14 +14,8 @@
     <link rel="stylesheet" href="./assets/css/output.css" />
 
     <script>
-      const params = new URLSearchParams(window.location.search);
-      const fromIntro = params.get("fromIntro");
-
-      if (fromIntro !== "1") {
+      if (!sessionStorage.getItem("introPlayed")) {
         window.location.replace("./landing.html");
-      } else {
-        params.delete("fromIntro");
-        window.history.replaceState({}, "", window.location.pathname);
       }
     </script>
   </head>
@@ -142,7 +136,7 @@
               <p class="mt-2 text-sm text-zinc-300">
                 A comparison and implementation of modern CSS frameworks with focus on structure, scalability and maintainability.
               </p>
-              <a href="./projects/css-frameworks.html" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-cyan-300 hover:text-cyan-200">
+              <a href="./projects/project.html?id=css-frameworks" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-cyan-300 hover:text-cyan-200">
                 View project →
               </a>
             </div>
@@ -156,7 +150,7 @@
               <p class="mt-2 text-sm text-zinc-300">
                 Exploring JavaScript frameworks with emphasis on component structure, state handling and developer experience.
               </p>
-              <a href="./projects/js-frameworks.html" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-cyan-300 hover:text-cyan-200">
+              <a href="./projects/project.html?id=js-frameworks" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-cyan-300 hover:text-cyan-200">
                 View project →
               </a>
             </div>
@@ -170,7 +164,7 @@
               <p class="mt-2 text-sm text-zinc-300">
                 A complete front-end project combining design, API integration and interaction, built with a focus on real-world use.
               </p>
-              <a href="./projects/semester-project-2.html" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-cyan-300 hover:text-cyan-200">
+              <a href="./projects/project.html?id=semester-project-2" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-cyan-300 hover:text-cyan-200">
                 View project →
               </a>
             </div>
