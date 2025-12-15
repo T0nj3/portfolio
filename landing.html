@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading – Tonje Albertin Kristiansen</title>
+    <link rel="stylesheet" href="./assets/css/output.css" />
+
+    <script>
+      setTimeout(() => {
+        window.location.replace("./index.html?fromIntro=1");
+      }, 5000);
+    </script>
+  </head>
+
+  <body class="relative flex min-h-screen items-center justify-center bg-zinc-950 text-zinc-100 overflow-hidden">
+
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.15),transparent_60%)]"></div>
+
+    <div class="relative z-10 flex w-full max-w-md flex-col items-center gap-6 px-6 text-center">
+
+      <h1 class="text-3xl font-semibold tracking-tight text-cyan-300">
+        Tonje<br />
+        <span class="font-normal text-zinc-200">
+          Albertin Kristiansen
+        </span>
+      </h1>
+
+      <div class="relative h-1 w-full overflow-hidden rounded-full bg-white/10">
+        <div class="absolute inset-y-0 left-0 w-full animate-loading bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-400"></div>
+      </div>
+
+      <p class="text-sm tracking-wide text-zinc-400">
+        Preparing portfolio…
+      </p>
+    </div>
+
+    <style>
+      @keyframes loading {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+      }
+      .animate-loading {
+        animation: loading 2s ease-in-out infinite;
+      }
+    </style>
+  </body>
+</html>

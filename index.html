@@ -4,56 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tonje Albertin Kristiansen | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/output.css" />
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const fromIntro = params.get("fromIntro");
+
+      if (fromIntro !== "1") {
+        window.location.replace("./landing.html");
+      } else {
+        params.delete("fromIntro");
+        window.history.replaceState({}, "", window.location.pathname);
+      }
+    </script>
   </head>
 
-  <body class="min-h-screen bg-zinc-50 text-zinc-900">
-    <header class="border-b border-black/10 bg-white">
+  <body class="min-h-screen overflow-x-hidden bg-zinc-950 font-[Inter] text-zinc-50">
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute inset-0 bg-zinc-950"></div>
+  
+      <div class="absolute -top-56 left-[-14rem] h-[34rem] w-[34rem] rounded-full bg-cyan-400/30 blur-3xl sm:h-[42rem] sm:w-[42rem] md:h-[50rem] md:w-[50rem]"></div>
+      <div class="absolute -top-72 right-[-18rem] h-[36rem] w-[36rem] rounded-full bg-fuchsia-500/28 blur-3xl sm:h-[44rem] sm:w-[44rem] md:h-[54rem] md:w-[54rem]"></div>
+      <div class="absolute bottom-[-24rem] left-1/2 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-blue-500/24 blur-3xl sm:h-[36rem] sm:w-[36rem] md:h-[44rem] md:w-[44rem]"></div>
+  
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(34,211,238,0.22),transparent_55%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_82%_20%,rgba(217,70,239,0.20),transparent_55%)]"></div>
+    </div>
+  
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-zinc-950/30 backdrop-blur-xl">
+      <div class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-400/32 via-blue-500/16 to-transparent"></div>
+        <div class="absolute left-[-14rem] top-1/2 h-[18rem] w-[min(48rem,95vw)] -translate-y-1/2 rounded-full bg-cyan-300/30 blur-3xl"></div>
+        <div class="absolute left-12 top-[-8rem] h-[14rem] w-[min(26rem,75vw)] rounded-full bg-fuchsia-400/18 blur-3xl sm:left-28 sm:h-[16rem] sm:w-[30rem]"></div>
+      </div>
+  
       <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <a href="./index.html" class="text-sm font-semibold tracking-tight">
-          Tonje Albertin Kristiansen
+        <a href="./index.html" class="inline-flex items-baseline gap-3">
+          <span class="font-['Space_Grotesk'] text-base font-semibold tracking-tight text-white drop-shadow-[0_0_32px_rgba(34,211,238,0.35)]">
+            Tonje <span class="text-white/75">Albertin</span> Kristiansen
+          </span>
+          <span class="hidden text-xs font-semibold tracking-[0.22em] text-cyan-200/90 md:inline">
+            FRONT-END
+          </span>
         </a>
-
-        <nav class="flex items-center gap-2 text-sm">
-          <a class="rounded-full px-3 py-2 hover:bg-black/5" href="#projects">Projects</a>
-          <a class="rounded-full px-3 py-2 hover:bg-black/5" href="#contact">Contact</a>
-          <button
-            type="button"
-            class="rounded-full border border-black/10 bg-black/[0.04] px-3 py-2 font-medium hover:bg-black/10"
-          >
-            🌙 Dark
-          </button>
+  
+        <nav class="hidden items-center gap-2 text-sm md:flex">
+          <a href="#projects" class="rounded-full px-3 py-2 text-zinc-200/90 hover:bg-white/5 hover:text-white">Projects</a>
+          <a href="#contact" class="rounded-full px-3 py-2 text-zinc-200/90 hover:bg-white/5 hover:text-white">Contact</a>
         </nav>
+  
+        <a href="#projects" class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm font-medium text-white hover:bg-white/10">
+          View work
+        </a>
       </div>
     </header>
 
-    <main class="mx-auto max-w-6xl px-4 py-10">
-      <section class="rounded-2xl border border-black/10 bg-white p-6">
-        <h1 class="text-2xl font-semibold tracking-tight">Tailwind test</h1>
-        <p class="mt-2 text-sm text-zinc-600">
-          If this card is white with rounded corners and a subtle border, Tailwind is working.
-        </p>
-
-        <div class="mt-5 flex flex-wrap gap-2">
-          <span class="rounded-full bg-cyan-500 px-3 py-1 text-xs font-semibold text-white">cyan</span>
-          <span class="rounded-full bg-purple-500 px-3 py-1 text-xs font-semibold text-white">purple</span>
-          <span class="rounded-full bg-zinc-900 px-3 py-1 text-xs font-semibold text-white">zinc</span>
-        </div>
-      </section>
-
-      <section id="projects" class="mt-10">
-        <h2 class="text-lg font-semibold">Projects</h2>
-        <div class="mt-4 grid gap-4 md:grid-cols-3">
-          <div class="rounded-2xl border border-black/10 bg-white p-5">Card 1</div>
-          <div class="rounded-2xl border border-black/10 bg-white p-5">Card 2</div>
-          <div class="rounded-2xl border border-black/10 bg-white p-5">Card 3</div>
-        </div>
-      </section>
-
-      <section id="contact" class="mt-10">
-        <h2 class="text-lg font-semibold">Contact</h2>
-        <p class="mt-2 text-sm text-zinc-600">This is just a placeholder.</p>
-      </section>
-    </main>
   </body>
 </html>
