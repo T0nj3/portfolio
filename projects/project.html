@@ -14,11 +14,11 @@
   </head>
 
   <body class="min-h-screen overflow-x-hidden bg-zinc-950 font-[Inter] text-zinc-50">
-    <div class="pointer-events-none fixed inset-0 -z-10">
+    <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
       <div class="absolute inset-0 bg-zinc-950"></div>
-      <div class="absolute -top-56 left-[-14rem] h-[34rem] w-[34rem] rounded-full bg-cyan-400/32 blur-3xl sm:h-[42rem] sm:w-[42rem] md:h-[52rem] md:w-[52rem]"></div>
-      <div class="absolute -top-72 right-[-18rem] h-[36rem] w-[36rem] rounded-full bg-fuchsia-500/30 blur-3xl sm:h-[44rem] sm:w-[44rem] md:h-[56rem] md:w-[56rem]"></div>
-      <div class="absolute bottom-[-24rem] left-1/2 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-blue-500/26 blur-3xl sm:h-[36rem] sm:w-[36rem] md:h-[46rem] md:w-[46rem]"></div>
+      <div class="absolute -top-56 left-[-14rem] h-[34rem] w-[min(34rem,100vw)] rounded-full bg-cyan-400/32 blur-3xl sm:h-[42rem] sm:w-[min(42rem,100vw)] md:h-[52rem] md:w-[min(52rem,100vw)]"></div>
+      <div class="absolute -top-72 right-[-18rem] h-[36rem] w-[min(36rem,100vw)] rounded-full bg-fuchsia-500/30 blur-3xl sm:h-[44rem] sm:w-[min(44rem,100vw)] md:h-[56rem] md:w-[min(56rem,100vw)]"></div>
+      <div class="absolute bottom-[-24rem] left-1/2 h-[30rem] w-[min(30rem,100vw)] -translate-x-1/2 rounded-full bg-blue-500/26 blur-3xl sm:h-[36rem] sm:w-[min(36rem,100vw)] md:h-[46rem] md:w-[min(46rem,100vw)]"></div>
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_16%_14%,rgba(34,211,238,0.26),transparent_55%)]"></div>
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_86%_18%,rgba(217,70,239,0.22),transparent_55%)]"></div>
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_55%_90%,rgba(59,130,246,0.18),transparent_60%)]"></div>
@@ -26,10 +26,10 @@
     </div>
 
     <header class="sticky top-0 z-40 border-b border-white/10 bg-zinc-950/30 backdrop-blur-xl">
-      <div class="pointer-events-none absolute inset-0 -z-10">
+      <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-cyan-400/34 via-blue-500/16 to-transparent"></div>
-        <div class="absolute left-[-14rem] top-1/2 h-[18rem] w-[min(52rem,96vw)] -translate-y-1/2 rounded-full bg-cyan-300/30 blur-3xl"></div>
-        <div class="absolute left-10 top-[-9rem] h-[14rem] w-[min(26rem,78vw)] rounded-full bg-fuchsia-400/20 blur-3xl sm:left-28 sm:h-[16rem] sm:w-[32rem]"></div>
+        <div class="absolute left-[-14rem] top-1/2 h-[18rem] w-[min(52rem,100vw)] -translate-y-1/2 rounded-full bg-cyan-300/30 blur-3xl"></div>
+        <div class="absolute left-10 top-[-9rem] h-[14rem] w-[min(26rem,100vw)] rounded-full bg-fuchsia-400/20 blur-3xl sm:left-28 sm:h-[16rem] sm:w-[min(32rem,100vw)]"></div>
         <div class="absolute inset-0 opacity-[0.10] bg-[radial-gradient(circle_at_18%_50%,rgba(255,255,255,0.22),transparent_55%)]"></div>
       </div>
 
@@ -58,11 +58,7 @@
           <span class="text-cyan-300">←</span> Back to projects
         </a>
 
-        <button
-          id="copyLink"
-          type="button"
-          class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-zinc-100 hover:bg-white/10"
-        >
+        <button id="copyLink" type="button" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-zinc-100 hover:bg-white/10">
           Copy link
         </button>
       </div>
@@ -76,19 +72,9 @@
           <p id="intro" class="mt-5 max-w-2xl text-base leading-relaxed text-zinc-300 md:text-lg"></p>
 
           <div class="mt-8 flex flex-wrap gap-3">
-            <a
-              id="live"
-              target="_blank"
-              class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-zinc-950 hover:opacity-95"
-            >
-              Live site
-            </a>
+            <a id="live" target="_blank" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-zinc-950 hover:opacity-95">Live site</a>
 
-            <a
-              id="github"
-              target="_blank"
-              class="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-zinc-100 hover:bg-white/10"
-            >
+            <a id="github" target="_blank" class="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-zinc-100 hover:bg-white/10">
               GitHub README
             </a>
           </div>
@@ -106,18 +92,12 @@
 
         <div class="lg:col-span-5" data-reveal>
           <figure class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur">
-            <div class="pointer-events-none absolute inset-0 -z-10">
+            <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
               <div class="absolute -top-24 left-[-6rem] h-64 w-64 rounded-full bg-cyan-400/18 blur-3xl"></div>
               <div class="absolute -bottom-28 right-[-6rem] h-72 w-72 rounded-full bg-fuchsia-500/16 blur-3xl"></div>
             </div>
-            <img
-              id="image"
-              alt=""
-              class="h-[18rem] w-full object-cover transition duration-700 group-hover:scale-[1.03] sm:h-[22rem] lg:h-[28rem]"
-            />
-            <figcaption id="caption" class="border-t border-white/10 px-5 py-4 text-sm text-zinc-300">
-              Project preview
-            </figcaption>
+            <img id="image" alt="" class="h-[18rem] w-full object-cover transition duration-700 group-hover:scale-[1.03] sm:h-[22rem] lg:h-[28rem]" />
+            <figcaption id="caption" class="border-t border-white/10 px-5 py-4 text-sm text-zinc-300">Project preview</figcaption>
           </figure>
 
           <div class="mt-6 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur" data-reveal>
@@ -141,22 +121,67 @@
       </section>
     </main>
 
+    <footer class="relative mt-24 border-t border-white/10 bg-zinc-950/20 backdrop-blur-xl">
+      <div class="pointer-events-none absolute inset-x-0 -z-10 overflow-hidden">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="relative h-px">
+            <div class="absolute left-0 top-[-10rem] h-[14rem] w-[min(28rem,100vw)] rounded-full bg-cyan-400/18 blur-3xl"></div>
+            <div class="absolute right-0 top-[-12rem] h-[16rem] w-[min(32rem,100vw)] rounded-full bg-fuchsia-500/14 blur-3xl"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-6xl px-4 py-10">
+        <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p class="font-['Space_Grotesk'] text-base font-semibold tracking-tight text-white">
+              Tonje <span class="text-white/75">Albertin</span> Kristiansen
+            </p>
+            <p class="mt-2 max-w-md text-sm text-zinc-400">
+              Front-end portfolio featuring selected projects, clean structure and a subtle cyber glow.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="https://github.com/T0nj3" target="_blank" class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-zinc-100 hover:bg-white/10">
+              GitHub
+            </a>
+            <a href="mailto:your@email.com" class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-zinc-100 hover:bg-white/10">
+              Email
+            </a>
+            <a href="#projects" class="rounded-full bg-white px-4 py-2 text-sm font-semibold text-zinc-950 hover:opacity-95">
+              View projects
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-sm text-zinc-500">© <span id="year"></span> Tonje Albertin Kristiansen</p>
+          <p class="text-xs font-semibold tracking-[0.22em] text-zinc-500">BUILT WITH HTML · TAILWIND · JS</p>
+        </div>
+      </div>
+
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear()
+      </script>
+    </footer>
+
     <script src="../assets/js/project.js"></script>
     <script src="../assets/js/reveal.js"></script>
 
     <script>
-      const btn = document.getElementById("copyLink");
+      const btn = document.getElementById("copyLink")
       if (btn) {
         btn.addEventListener("click", async () => {
           try {
-            await navigator.clipboard.writeText(window.location.href);
-            btn.textContent = "Copied";
-            setTimeout(() => (btn.textContent = "Copy link"), 1200);
+            await navigator.clipboard.writeText(window.location.href)
+            btn.textContent = "Copied"
+            setTimeout(() => (btn.textContent = "Copy link"), 1200)
           } catch {
-            btn.textContent = "Copy failed";
-            setTimeout(() => (btn.textContent = "Copy link"), 1200);
+            btn.textContent = "Copy failed"
+            setTimeout(() => (btn.textContent = "Copy link"), 1200)
           }
-        });
+        })
       }
     </script>
   </body>
